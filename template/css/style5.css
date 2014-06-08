@@ -1,0 +1,249 @@
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+margin: 0;
+padding: 0;
+}
+
+body {
+height: 100%;
+font: 13px 'PT Sans', Arial, Tahoma, Verdana, Sans-Serif;
+color: #626363;
+background: #fff;
+}
+.wraper {
+width: 960px;
+margin: 0 auto;
+position: relative;
+}
+.header {
+position: relative;
+min-height: 108px;
+z-index: 1001;
+margin: 0px;
+padding: 0px;
+display: block;
+}
+.header .logo, .header .logo:visited {
+text-indent: -999em;
+cursor: pointer;
+background: url(../img/logo.jpg) no-repeat;
+display: block;
+width: 175px;
+height: 37px;
+position: absolute;
+top: 37px;
+left: 0;
+}
+.large-8 , .medium-8 {
+position: relative;
+width: 66.66667%;
+}
+
+.small-12 , .large-12 {
+position: relative;
+width: 100%;
+}
+
+@media only screen and (min-width: 64.063em)
+.column, .columns {
+position: relative;
+padding-left: 0.9375rem;
+padding-right: 0.9375rem;
+float: left;
+}
+.row {
+width: auto;
+margin-left: 2.0625rem;
+margin-right: 20.9375rem;
+margin-top: 0;
+margin-bottom: 0;
+max-width: none;
+}
+.be-tabs {
+background: #494949;
+background: #2f96bb;
+background: #5ea9c5;
+text-align: center;
+}
+.be-tabs h5.active a.local, .be-tabs h5:hover a.local {
+background: url('img/form/icoLocalTaxi-2.png') no-repeat center 0;
+}
+.row .row:before, .row .row:after {
+content: " ";
+display: table;
+}
+.be-tabs .columns h5 {
+background: #494949 url('/media/images/icons/imgBeTabsSeperator.gif') no-repeat top right;
+}
+.be-ex.be-tabs-contents {
+border: 1px solid #2dabd9;
+}
+.columns.large-centered {
+position: relative;
+margin-left: auto;
+margin-right: auto;
+float: none;
+}
+.large-6 {
+position: relative;
+width: 50%;
+}
+label {
+font-size: 0.875rem;
+color: #4d4d4d;
+cursor: pointer;
+display: block;
+font-weight: normal;
+margin-bottom: 0.5rem;
+}
+.text-left {
+text-align: left !important;
+}
+button, input {
+line-height: normal;
+}
+.large-6 {
+position: relative;
+width: 50%;
+}
+.d-panel-title {
+width: 80%;
+float: right;
+color: #666;
+font: normal 0.8rem Tahoma;
+margin-bottom: -0.85rem;
+}
+.d-n {
+display: none !important;
+}
+.row:after {
+clear: both;
+}
+.d-panel {
+width: 75%;
+width: 80%;
+float: right;
+border: 1px solid #ddd;
+background: #ffb;
+padding: 0.5rem;
+margin-top: 1.25rem;
+font-size: .7rem;
+font-family: Tahoma;
+line-height: 1.25;
+}
+button, input, select, textarea {
+font-family: inherit;
+font-size: 100%;
+margin: 0;
+}
+[class*="column"]+[class*="column"]:last-child {
+float: right;
+}
+[data-abide] .error small.error, [data-abide] span.error, [data-abide] small.error {
+display: block;
+padding: 0.375rem 0.5625rem 0.5625rem;
+padding: 0.5rem 0.05625rem 0.05rem;
+margin-top: -1px;
+margin-bottom: 1rem;
+font-size: 0.75rem;
+font-weight: normal;
+font-style: italic;
+font-style: normal;
+background: #C00000;
+background: none;
+color: white;
+color: #C00000;
+}
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+-webkit-appearance: none;
+-webkit-border-radius: 0;
+border-radius: 0;
+background-color: white;
+font-family: inherit;
+border: 1px solid #ccc;
+-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+color: rgba(0, 0, 0, 0.75);
+display: block;
+font-size: 0.875rem;
+margin: 0 0 1rem 0;
+padding: 0.5rem;
+height: 2.3125rem;
+width: 100%;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+-webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+-moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+.columns {
+padding-left: 0.9375rem;
+padding-right: 0.9375rem;
+float: left;
+}
+
+.be-tabs .columns h5, .be-tabs h5.columns {
+Xborder-right: 1px solid #666;
+Xborder-bottom: .35rem solid #494949;
+margin-bottom: 0;
+padding-bottom: 0.15rem;
+font-size: 1.1rem;
+font: bold 0.75rem/2 Tahoma;
+text-transform: capitalize;
+background: #494949;
+padding-top: 0.35rem;
+margin-top: 0;
+padding-bottom: .35rem;
+padding-left: 0.25rem;
+padding-right: 0.25rem;
+font-weight: bold;
+}
+.button:hover, .button:focus {
+background-color: #007095;
+}
+.button.small {
+padding-top: 0.875rem;
+padding-right: 1.75rem;
+padding-bottom: 0.9375rem;
+padding-left: 1.75rem;
+font-size: 0.8125rem;
+font-size: 1rem;
+letter-spacing: 0.05rem;
+padding: 0.78125rem 1.75rem 0.84375rem;
+border-radius: 0.15rem;
+}
+.button:hover, .button:focus {
+color: white;
+}
+ .button {
+display: inline-block;
+}
+.button {
+border-style: solid;
+border-width: 0px;
+cursor: pointer;
+font-family: 'Droid Sans',"Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+font-weight: normal;
+line-height: normal;
+margin: 0 0 1.25rem;
+position: relative;
+text-decoration: none;
+text-align: center;
+display: inline-block;
+padding-top: 1rem;
+padding-right: 2rem;
+padding-bottom: 1.0625rem;
+padding-left: 2rem;
+font-size: 1rem;
+background-color: #008cba;
+border-color: #007095;
+color: white;
+-webkit-transition: background-color 300ms ease-out;
+-moz-transition: background-color 300ms ease-out;
+transition: background-color 300ms ease-out;
+padding-top: 1.0625rem;
+padding-bottom: 1rem;
+-webkit-appearance: none;
+border: none;
+font-weight: normal !important;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>first page</title>
+<link rel="icon" type="img/png" href="img/favicon.ico" />
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+<!--<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>-->
+<link rel="stylesheet" type="text/css" href="css/style1.css">
+<link rel="stylesheet" type="text/css" href="font/css/font-awesome.min.css">
+</head>
+<body>
+<div class="wraper">
+ <header class="header">
+  <a class="logo" href="index.html"></a>
+  <nav>
+  <!-- top menu -->
+   <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html">Services</a>
+    <li><a href="contact.html">Contacts</a>
+   </ul>
+  <!-- /top menu -->
+  </nav>
+ </header>
+</div> 
+<div class="content_block">
+ <!-- top_title -->
+ <div class="top_title">
+  <div class="text_bar_shadow"></div>
+  <div class="wraper">
+    <h2>CAB Booking<span>Corporate Account</span></h2>
+    <ul><li><p>Our value added services for you..</p></li></ul>
+  </div>
+ </div>
+</div>
+ <div class="text_bar_shadow2"></div>
+</div>
+<div class="wraper1">
+  <!-- intro text -->
+    <img class='slider' id='img_slider'/>
+    <script type="text/javascript" src="js/libs/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+      var imgList = [
+        '1.jpg',
+        '2.jpg',
+        '3.jpg',
+        '4.jpg',
+        '5.jpg',
+        '6.jpg'
+      ], i = 0, $img = $('#img_slider'), imgPath = 'img/';
+
+      function setSrc() {
+        $img.attr('src', imgPath + imgList[i]);
+        if (i < imgList.length - 1) {
+          i++;
+        }
+        else {
+          i = 0;
+        }
+        setTimeout(function() { setSrc(); }, 2000);
+      }
+      setSrc();
+    });
+  </script>
+<form>
+  <h1>Employer Login</h1>
+  <div class="inset">
+  <p>
+    <label for="email">EMPLOYER ID</label>
+    <div class='icon'>
+       <span class='icon_i'><i class='fa fa-envelope-o fa fw'></i></span>
+     <input type="text" name="email" placeholder="Enter your hcl id">
+     
+    </div>
+  </p>
+  <p>
+    <label for="password">PASSWORD</label>
+    <div class='icon'>
+      <span class='icon_i'><i class='fa fa-key fa fw'></i></span>
+     <input type="password" name="password" placeholder="Enter your password">
+    </div>
+  </p>
+  <p>
+    <input type="checkbox" name="remember" id="remember">
+    <label for="remember">Remember me</label>
+  </p>
+  </div>
+  <p class="p-container">
+    <span>Forgot password ?</span>
+    <input type="submit" name="go" id="go" value="Log in">
+  </p>
+</form>
+</body>
+</html>
+

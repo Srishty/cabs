@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Contacts</title>
+<link rel="icon" type="img/png" href="img/favicon.ico" />
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+<!--link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>-->
+<link rel="stylesheet" type="text/css" href="css/style4.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css"> 
+<link rel="stylesheet" type="text/css" href="css/jquery.onebyone.css">
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.bxSlider.min.js"></script>
+<script src="js/jquery.onebyone.min.js"></script>              
+<script src="js/jquery.touchwipe.min.js"></script> 
+<script src="js/jquery.blackandwhite.min.js"></script>
+<script src="js/js_func.js"></script>
+<link rel="stylesheet" type="text/css" href="font/css/font-awesome.min.css">
+
+<script>
+$(function(){
+    $('#obo_slider').oneByOne({
+    className: 'oneByOne1',              
+    easeType: 'random',
+    slideShow: true
+  });  
+  $('.clients_slider').bxSlider({
+    auto: false,
+    controls : false,
+    mode: 'fade',
+    pager: true
+  }); 
+    $('.bwWrapper').BlackAndWhite({
+        hoverEffect : true,
+        webworkerPath : false,
+        responsive:true,
+        invertHoverEffect:false
+    });
+})
+</script>
+</head>
+<body>
+<div class="wraper">
+ <header class="header">
+  <a class="logo" href="index.html"></a>
+  <nav>
+  <!-- top menu -->
+   <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html">Services</a>
+    <li><a href="contact.html" class="active">Contacts</a>
+   </ul>
+  <!-- /top menu -->
+  </nav>
+ </header>
+</div> 
+<div class="content_block">
+ <!-- top_title -->
+ <div class="top_title">
+  <div class="text_bar_shadow"></div>
+  <div class="wraper">
+    <h2>Get In Touch<span>We're just an email or phone call away!</span></h2>
+    <ul><li><p>Our value added services for you..</p></li></ul>
+  </div>
+ </div>
+ </div>
+ <div class="text_bar_shadow2"></div>
+</div>
+<div class="wraper1">
+    <div class="fallback"></div>
+    <div class="oneByOne1" style="overflow: hidden;"><div id="obo_slider" style="left: 0px;">         
+    <div class="oneByOne_item" style="display: block; left: 0px;">
+      <img src="img/home_page_7/home7_slide_1.png" class="wp1_3 wp1_left animate0 rollIn" alt="" style="display: block;">                  
+      <span class="txt1 txt_right animate1 rollIn" style="display: block;">HCL Infosystems Ltd. (Corporate Office)</span>     
+      <span class="txt2 txt_right animate2 rollIn" style="display: block;">Corporate Office</span>                      
+      <span class="txt3 txt_right animate3 rollIn" style="display: block;"> <span class='icon_i'><i class='fa fa-home fa-2x'></i></span> E-4,5 & 6, Sector 11,NOIDA 201 301,UP India Tel : <span class='icon_i'><i class='fa fa-phone-o fa fw'></i></span> +91 120 2526518/19, 2520977 Fax : <span class='icon_i'><i class='fa fa-fax fa fw'></i></span> 2550923 Prefix from Delhi: 0120</span>
+    </div>
+    <div class="oneByOne_item" style="display: none; left: 960px;">                                   
+      <img src="img/home_page_7/home7_slide_2.png" class="wp1_3 wp1_left animate0" alt="" style="display: none;">                  
+      <span class="txt1 blue txt_right2 animate1" style="display: none;">Corporate Office</span>      
+      <span class="txt2 blue txt_right2 animate2" style="display: none;">HCL Care</span>                        
+      <span class="txt2 blue txt_right2 animate3" style="display: none;">HCL Services Limited</span>                       
+    </div>  
+    
+    <div class="oneByOne_item" style="display: none; left: 1920px;">
+      <img src="img/home_page_7/home7_slide_3.png" class="wp1_3 animate0" alt="" style="display: none;">                 
+      <span class="txt1 animate1" style="display: none;">Contact Information :1860 180 3333</span>      
+      <span class="txt2 animate2" style="display: none;">SMS your query to : +91 9911115555</span>                       
+      <span class="txt3 animate3" style="display: none;">For Service Requests : <span class='icon_i'><i class='fa fa-envelope-o fa fw'></i></span>
+<a href="hcltouch@hcl.com">hcltouch@hcl.com</a></span>                        
+    </div>                                                                                              
+
+    <div class="oneByOne_item" style="display: none; left: 2880px;">                                  
+      <img src="img/home_page_7/home7_slide_4.png" class="wp1_3 animate0" alt="" style="display: none;">             
+      <span class="txt1 blue animate1" style="display: none;">HCL Infosystems Head Office </span>      
+      <span class="txt2 blue animate2" style="display: none;">HCL Customer Care</span>                       
+      <span class="txt3 short animate3" style="display: none;"><span class='icon_i'><i class='fa fa-phone-square fa-2x'></i></span> Phone: 1860-1800-425 Phone: 0120-2406105
+        Reach the above numbers for enquiries on HCL products, complaints or for questions on its services across India.</span>
+    </div>  
+</div>
+</body>
+</html>

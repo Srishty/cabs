@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="  js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>form page</title>
+<link rel="icon" type="img/png" href="img/favicon.ico" />
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+<!--<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>-->
+<link rel="stylesheet" type="text/css" href="css/style5.css">
+<link rel="stylesheet" type="text/css" href="font/css/font-awesome.min.css">
+</head>
+<body>
+<div class="wraper">
+ <header class="header">
+  <a class="logo" href="index.html"></a>
+ </header>
+ <a href="#" class="logout-register-link" data-reveal-id="modalLogout" title="Logout" id="mfa7"><span class="icon-caption" id="mf21">Logout
+</span></a>
+ <div class="large-8 medium-8 small-12 columns" role="content" id="mf24">
+    <div class="row be-tabs" id="mf25">
+        <div class="large-12 medium-12 small-12 columns" id="mf26">
+            <div class="row" id="mf27">
+                <h5 class="large-4 small-4 columns active" id="mf28">
+                    <a class="local" title="Delhi Local" href="http://www.savaari.com/delhi/car-rental" id="mfa8">Local</a>
+                </h5>
+                <h5 class="large-4 small-4 columns" id="mf29">
+                    <a class="airport" title="Delhi Airport Transfer" href="http://www.savaari.com/delhi/airport-taxi" id="mfa9">Airport Transfer</a>
+                </h5>
+                <h5 class="large-4 small-4 columns " id="mf30">
+                    <a class="outstation" title="Delhi Outstation" href="http://www.savaari.com/delhi/outstation-cabs" id="mfa10">Outstation</a>
+                </h5>
+            </div>
+        </div>
+        <!-- <h5 class="large-2 medium-2 small-2 columns">
+            <a class="more" href="#" data-dropdown="be-more-dropdown" data-options="is_hover:false">More &#x25BF</a>
+        </h5>
+        <ul id="be-more-dropdown" class="f-dropdown" data-dropdown-content>
+            <li><a href="#">Cities</a></li>
+            <li><a href="#">Cars</a></li>
+        </ul> -->
+    </div>
+    
+
+    <div class="row be-tabs-contents be-ex" id="mf31">
+        <div class="large-11 medium-12 small-11 columns large-centered  text-left" id="mf32">
+
+            <!-- Booking Engine -->
+            <form method="GET" action="http://www.savaari.com/select_cars.php" data-abide="" novalidate="novalidate" id="mf_form0">
+    <div class="row" id="mf33">
+        <div class="large-6 medium-6 small-12 columns input-wrapper" id="mf34">
+            <label for="from_city" id="mf35">I want a car in<span class="label-more" id="mf36">in 60 cities</span></label>
+            <input type="text" class="[radius round]" id="from_city" name="from_city" value="" placeholder="Start typing city - e.g. Bangalore" required="" autocomplete="off">
+            <input type="hidden" id="from_city_dummy" name="from_city_dummy" value="">
+            <small class="c-error error" id="mf37">Select your city of travel</small>
+        </div>
+        <div class="large-6 medium-6 small-12 columns" id="mf38">
+            <label for="duration" id="mf39">for</label>
+            <select name="duration" id="duration" required="">
+                <option value="" selected="selected" id="mf40">Duration</option>
+                <option value="0" id="mf41">Half Day (4Hr/40Kms)</option>
+                <option value="1" id="mf42">Full Day (8Hr/80Kms)</option>
+                <option value="2" id="mf43">2 Days</option>
+                <option value="3" id="mf44">3 Days</option>
+                <option value="4" id="mf45">4 Days</option>
+                <option value="5" id="mf46">5 Days</option>
+                <option value="6" id="mf47">6 Days</option>
+                <option value="7" id="mf48">7 Days</option>
+                <option value="8" id="mf49">8 Days</option>
+                <option value="9" id="mf50">9 Days</option>
+                <option value="10" id="mf51">10 Days</option>
+            </select>
+            <small class="c-error error" id="mf52">Select trip duration</small>
+        </div>
+    </div>
+
+    <div class="row" id="mf53">
+        <div class="large-6 medium-6 small-12 columns" id="mf54">
+            <label for="pickup_date" id="mf55">on</label>
+            <input type="text" name="pickup_date" id="pickup_date" class="datepicker" data-date-format="dd-mm-yyyy" value="08-06-2014" placeholder="Select Date" readonly="" required="">
+            <small class="c-error error" id="mf56">Choose your travel date</small>
+        </div>
+        <div class="large-6 medium-6 small-12 columns" id="mf57">
+            <label for="pickup_time" id="mf58">at</label>
+            <select name="pickup_time" id="pickup_time" required="" autocomplete="off">
+                <option value="" selected="" id="mf59">Select Time</option>
+                <option value="17:45" selected="" id="mf60">05:45 PM</option><option value="18:00" id="mf61">06:00 PM</option><option value="18:15" id="mf62">06:15 PM</option><option value="18:30" id="mf63">06:30 PM</option><option value="18:45" id="mf64">06:45 PM</option><option value="19:00" id="mf65">07:00 PM</option><option value="19:15" id="mf66">07:15 PM</option><option value="19:30" id="mf67">07:30 PM</option><option value="19:45" id="mf68">07:45 PM</option><option value="20:00" id="mf69">08:00 PM</option><option value="20:15" id="mf70">08:15 PM</option><option value="20:30" id="mf71">08:30 PM</option><option value="20:45" id="mf72">08:45 PM</option><option value="21:00" id="mf73">09:00 PM</option><option value="21:15" id="mf74">09:15 PM</option><option value="21:30" id="mf75">09:30 PM</option><option value="21:45" id="mf76">09:45 PM</option><option value="22:00" id="mf77">10:00 PM</option><option value="22:15" id="mf78">10:15 PM</option><option value="22:30" id="mf79">10:30 PM</option><option value="22:45" id="mf80">10:45 PM</option><option value="23:00" id="mf81">11:00 PM</option><option value="23:15" id="mf82">11:15 PM</option><option value="23:30" id="mf83">11:30 PM</option><option value="23:45" id="mf84">11:45 PM</option>            </select>
+            <small class="c-error error" id="mf85">Choose pickup time</small>
+        </div>
+    </div>
+
+    <div class="row" id="mf86">
+        <div class="large-6 medium-6 small-12 columns right" id="mf87">
+            <input type="hidden" id="trip_type" name="trip_type" value="2">
+            <input type="submit" id="go" name="go" class="button small large-12" style="font-weight:bold;font-size:17px;" value="Book">
+        </div>
+    </div>
+</form>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>
