@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>form page</title>
+<link rel="icon" type="img/png" href="img/favicon.ico" />
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+<!--<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>-->
+<link rel="stylesheet" type="text/css" href="css/style5.css">
+<link rel="stylesheet" type="text/css" href="font/css/font-awesome.min.css">
+</head>
+<body>
+  <form action="" method="post" class="basic-grey">
+    <h1>Give Feedback 
+        <span>Please fill all the texts in the fields.</span>
+    </h1>
+    <label>
+        <span>Subject :</span><select name="selection">
+        <option value="Support">---</option>
+        <option value="Query">Query</option>
+        <option value="Suggestion">Suggestion</option>
+        <option value="Complaint">Complaint</option>
+        <option value="Feedback">Feedback</option>
+        </select>
+    <label>
+        <span>Message :</span>
+        <textarea id="message" name="message" placeholder="I suggest you.."></textarea>
+    </label> 
+    
+    </label> 
+     <label>
+        <span> Email :</span>
+        <input id="email" type="email" name="email" placeholder="Your email address" />
+    </label>   
+     <label>
+        <span>&nbsp;</span> 
+        <input type="button" class="button" value="Post" /> 
+        <input type="button" class="button" value="Clear" />
+    </label>        
+</form>
+</body>
+</html>
