@@ -377,7 +377,7 @@ div.icon input {
   width: 80%;
   border-radius: 0 0.3em 0.3em 0;
 }
-div span.icon_i{
+div span.login{
   background: linear-gradient(#1f2124, #27292c);
   box-shadow:
     0 1px 0 rgba(255,255,255,0.1);
@@ -565,6 +565,7 @@ display: none;
    background: linear-gradient(#ffffff, #ffffff) !important;
    border-right: 1px solid #FFFFFF !important;
 }
+
 @font-face {
   font-family: 'PT Sans';
   font-style: normal;
