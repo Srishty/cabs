@@ -181,7 +181,7 @@ $(function() {
     $('.delete-booking').click(function(e) {
       e.preventDefault();
       var $this = $(this), bookingId = $this.data('booking-d');
-      if ('Are you sure, you want to cancel this cab?'){
+      if (confirm('Are you sure, you want to cancel this cab?')){
         $.ajax({
           url: '/employee/delete-booking-cab/',
           type: 'get',
@@ -191,6 +191,38 @@ $(function() {
             alert(response.message);
             if (response.status == 1) {
               $mainLink.eq(1).click();
+            }
+          }
+        });
+      }
+    });
+  }
+  function approveCabBind() {
+    var $bookingLink = $('.booking-link'), $bookingDiv = $('.be-ex');
+    if ($bookingLink.length > 0) {
+      $bookingLink.click(function(e) {
+        e.preventDefault();
+        var $this = $(this);
+        $bookingLink.parent().removeClass('active');
+        $this.parent().addClass('active');
+        $bookingDiv.hide();
+        $($this.attr('href')).show();
+      });
+      $bookingLink.eq(0).click();
+    }
+    $('.approve-booking').click(function(e) {
+      e.preventDefault();
+      var $this = $(this), bookingId = $this.data('booking-d');
+      if (confirm('Are you sure, you want to approve this cab?')){
+        $.ajax({
+          url: '/employee/approve-booking-cab/',
+          type: 'get',
+          data: {booking_id: bookingId},
+          cache: false,
+          success: function(response) {
+            alert(response.message);
+            if (response.status == 1) {
+              $mainLink.eq(2).click();
             }
           }
         });
@@ -574,7 +606,20 @@ $(function() {
   $('#approve_cab').click(function(e) {
     e.preventDefault()
     $headerText.text('Approve Cabs');
-    $container.html('You can approve your employees cab');
+    $.ajax({
+      url: '/employee/approve-cab-list/',
+      type: 'get',
+      cache: false,
+      success: function(response) {
+        if (response.status = 1) {
+          $container.html(response.html);
+          approveCabBind();
+        }
+        else {
+          $("<label/>").addClass('error').text(response.message).appendTo($container.empty());
+        }
+      }
+    });
   });
   if ($firstLink.length > 0) {
     $firstLink.click();

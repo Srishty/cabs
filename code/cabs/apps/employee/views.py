@@ -3,7 +3,7 @@ from django.template.loader import render_to_string
 from django.middleware.csrf import get_token
 
 from libs.jsonresponse import JSONResponseMixin
-from models import CabBooking
+from models import CabBooking, EmployeeManager
 
 # Create your views here.
 class CabBookingView(View, JSONResponseMixin):
@@ -76,3 +76,38 @@ class DeleteBookedCab(View, JSONResponseMixin):
             data['message'] = 'Record not found.'
         return self.render_to_response(data)
 
+
+class ApproveCabListView(View, JSONResponseMixin):
+    '''
+    @summary: List of booked cab
+    '''
+    template_name = 'employee/cab_booking_list_approve.html'
+
+    def get(self, request, *args, **kwargs):
+        data = {}
+        data['status'] = 1
+        user_list = [e.employee for e in EmployeeManager.objects.filter(manager = self.request.user)]
+        context = {"local": CabBooking.objects.filter(booking_type = 'Local', user__in = user_list, status = 0)}
+        context["airport"] = CabBooking.objects.filter(booking_type = 'Airport', user__in = user_list, status = 0)
+        context["out_station"] = CabBooking.objects.filter(booking_type = 'Outstation', user__in = user_list, status = 0)
+        data['html'] = render_to_string(self.template_name, context)
+        return self.render_to_response(data)
+
+class ApproveBookedCab(View, JSONResponseMixin):
+    '''
+    @summary: Delete Booked Cab
+    '''
+    def get(self, request, *args, **kwargs):
+        data = {}
+        booking_id = self.request.GET.get('booking_id')
+        bc = CabBooking.objects.filter(id = booking_id)
+        if bc:
+            bc = bc[0]
+            bc.status = 1;
+            bc.save()
+            data['status'] = 1
+            data['message'] = 'Booked cab approved successfully.'
+        else:
+            data['status'] = 0
+            data['message'] = 'Record not found.'
+        return self.render_to_response(data)

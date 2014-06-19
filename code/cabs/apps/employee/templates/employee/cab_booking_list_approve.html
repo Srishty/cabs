@@ -22,35 +22,27 @@
                 <tbody>
                     <tr>
                         <th>S.No.</th>
+                        <th>Employee</th>
                         <th>City Name</th>
                         <th>Duration</th>
                         <th>On</th>
                         <th>At</th>
                         <th>Reason</th>
-                        <th>Status</th>
-                        <th>Cancel</th>
+                        <th>Approve</th>
                     </tr>
                     {% if local %}
                     {% for l in local %}
                     <tr>
                         <td>{{ forloop.counter }}</td>
+                        <td>{{ l.user.first_name }} {{ l.user.last_name }}</td>
                         <td>{{ l.start}}</td>
                         <td>{{ l.duration }}</td>
                         <td>{{ l.date }}</td>
                         <td>{{ l.time }}</td>
                         <td>{{ l.reason }}</td>
                         <td>
-                            {% if l.status == 0 %}
-                            Not Approved
-                            {% elif l.status == 1%}
-                            Approved By Manager
-                            {% else %}
-                            Approved By Cab Manager
-                            {% endif %}
-                        </td>
-                        <td>
-                        {% if l.status == 0 or l.status == 1 %}
-                        <a class="delete-booking" data-booking-d="{{ l.id }}" href="#"><span class="icon_i"><i class="fa fa-times fa fw"></i></span></a>
+                        {% if l.status == 0 %}
+                        <a class="approve-booking" data-booking-d="{{ l.id }}" href="#"><span class="icon_i"><i class="fa fa-square-o fa fw"></i></span></a>
                         {% endif %}
                         </td>
                     </tr>
@@ -71,18 +63,19 @@
                 <tbody>
                     <tr>
                         <th>S.No.</th>
+                        <th>Employee</th>
                         <th>want a car for</th>
                         <th>City</th>
                         <th>On</th>
                         <th>At</th>
                         <th>Reason</th>
-                        <th>Status</th>
-                        <th>Cancel</th>
+                        <th>Approve</th>
                     </tr>
                     {% if airport %}
                     {% for l in airport %}
                     <tr>
                         <td>{{ forloop.counter }}</td>
+                        <td>{{ l.user.first_name }} {{ l.user.last_name }}</td>
                         <td>{{ l.start}}</td>
                         <td>{{ l.end }}</td>
                         <td>{{ l.date }}</td>
@@ -90,18 +83,7 @@
                         <td>{{ l.reason }}</td>
                         <td>
                             {% if l.status == 0 %}
-                            Not Approved
-                            {% elif l.status == 1%}
-                            Approved By Manager
-                            {% else %}
-                            Approved By Cab Manager
-                            {% endif %}
-                        </td>
-                        <td>
-                            {% if l.status == 0 or l.status == 1 %}
-                            <a class="delete-booking" data-booking-d="{{ l.id }}" href="#"><span class="icon_i"><i class="fa fa-times fa fw"></i></span></a>
-                            {% else %}
-                            Approved
+                            <a class="approve-booking" data-booking-d="{{ l.id }}" href="#"><span class="icon_i"><i class="fa fa-square-o fa fw"></i></span></a>
                             {% endif %}
                         </td>
                     </tr>
@@ -122,37 +104,27 @@
                 <tbody>
                     <tr>
                         <th>S.No.</th>
+                        <th>Employee</th>
                         <th>From</th>
                         <th>To</th>
                         <th>On</th>
                         <th>At</th>
                         <th>Reason</th>
-                        <th>Status</th>
-                        <th>Cancel</th>
+                        <th>Approve</th>
                     </tr>
                     {% if out_station %}
                     {% for l in out_station %}
                     <tr>
                         <td>{{ forloop.counter }}</td>
+                        <td>{{ l.user.first_name }} {{ l.user.last_name }}</td>
                         <td>{{ l.start}}</td>
                         <td>{{ l.end }}</td>
                         <td>{{ l.date }}</td>
                         <td>{{ l.time }}</td>
                         <td>{{ l.reason }}</td>
                         <td>
-                            {% if l.status == 0 %}
-                            Not Approved
-                            {% elif l.status == 1%}
-                            Approved By Manager
-                            {% else %}
-                            Approved By Cab Manager
-                            {% endif %}
-                        </td>
-                        <td>
-                        {% if l.status == 0 or l.status == 1 %}
-                        <a class="delete-booking" data-booking-d="{{ l.id }}" href="#"><span class="icon_i"><i class="fa fa-times fa fw"></i></span></a>
-                        {% else %}
-                        Approved
+                        {% if l.status == 0 %}
+                        <a class="approve-booking" data-booking-d="{{ l.id }}" href="#"><span class="icon_i"><i class="fa fa-square-o fa fw"></i></span></a>
                         {% endif %}
                         </td>
                     </tr>
