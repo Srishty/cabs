@@ -41,7 +41,7 @@
                         <td>{{ l.time }}</td>
                         <td>{{ l.reason }}</td>
                         <td>
-                        {% if l.status == 0 %}
+                        {% if l.status == 0 or l.status == 1 %}
                         <a class="approve-booking" data-booking-d="{{ l.id }}" href="#"><span class="icon_i"><i class="fa fa-square-o fa fw"></i></span></a>
                         {% endif %}
                         </td>
@@ -82,7 +82,7 @@
                         <td>{{ l.time }}</td>
                         <td>{{ l.reason }}</td>
                         <td>
-                            {% if l.status == 0 %}
+                            {% if l.status == 0 or l.status == 1 %}
                             <a class="approve-booking" data-booking-d="{{ l.id }}" href="#"><span class="icon_i"><i class="fa fa-square-o fa fw"></i></span></a>
                             {% endif %}
                         </td>
@@ -123,7 +123,7 @@
                         <td>{{ l.time }}</td>
                         <td>{{ l.reason }}</td>
                         <td>
-                        {% if l.status == 0 %}
+                        {% if l.status == 0 or l.status == 1 %}
                         <a class="approve-booking" data-booking-d="{{ l.id }}" href="#"><span class="icon_i"><i class="fa fa-square-o fa fw"></i></span></a>
                         {% endif %}
                         </td>

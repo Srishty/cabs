@@ -229,6 +229,38 @@ $(function() {
       }
     });
   }
+  function approveCab2Bind() {
+    var $bookingLink = $('.booking-link'), $bookingDiv = $('.be-ex');
+    if ($bookingLink.length > 0) {
+      $bookingLink.click(function(e) {
+        e.preventDefault();
+        var $this = $(this);
+        $bookingLink.parent().removeClass('active');
+        $this.parent().addClass('active');
+        $bookingDiv.hide();
+        $($this.attr('href')).show();
+      });
+      $bookingLink.eq(0).click();
+    }
+    $('.approve-booking').click(function(e) {
+      e.preventDefault();
+      var $this = $(this), bookingId = $this.data('booking-d');
+      if (confirm('Are you sure, you want to approve this cab?')){
+        $.ajax({
+          url: '/employee/approve-booking-cab-2/',
+          type: 'get',
+          data: {booking_id: bookingId},
+          cache: false,
+          success: function(response) {
+            alert(response.message);
+            if (response.status == 1) {
+              $mainLink.eq(0).click();
+            }
+          }
+        });
+      }
+    });
+  }
   function bookCabBind() {
     var $bookingLink = $('.booking-link'), $bookingDiv = $('.be-ex');
     if ($bookingLink.length > 0) {
@@ -614,6 +646,24 @@ $(function() {
         if (response.status = 1) {
           $container.html(response.html);
           approveCabBind();
+        }
+        else {
+          $("<label/>").addClass('error').text(response.message).appendTo($container.empty());
+        }
+      }
+    });
+  });
+  $('#approve_cab2').click(function(e) {
+    e.preventDefault();
+    $headerText.text('Approve Cabs');
+    $.ajax({
+      url: '/employee/approve-cab-list-2/',
+      type: 'get',
+      cache: false,
+      success: function(response) {
+        if (response.status = 1) {
+          $container.html(response.html);
+          approveCab2Bind();
         }
         else {
           $("<label/>").addClass('error').text(response.message).appendTo($container.empty());
